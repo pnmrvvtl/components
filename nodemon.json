@@ -1,0 +1,6 @@
+{
+  "watch": ["src/styles/colors.ts"],
+  "ext": "ts",
+  "ignore": ["node_modules"],
+  "exec": "ts-node ./scripts/generate-scss-from-colors.ts"
+}

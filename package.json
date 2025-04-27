@@ -1,0 +1,77 @@
+{
+  "name": "pnmrvvtl-components",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/pnmrvvtl-components.cjs.js",
+  "module": "dist/pnmrvvtl-components.es.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/pnmrvvtl-components.es.js",
+      "require": "./dist/pnmrvvtl-components.cjs.js"
+    }
+  },
+  "scripts": {
+    "build": "vite build",
+    "build:watch": "vite build --watch",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "tsm": "typed-scss-modules src --watch",
+    "test": "vitest run",
+    "test:unit": "vitest run --filter unit",
+    "test:watch": "vitest --ui",
+    "test:stories": "vitest run --filter storybook",
+    "demo": "npm --prefix demo run dev",
+    "generate:colors": "tsx src/scripts/generate-scss-from-colors.ts",
+    "watch:colors": "nodemon --watch src/styles/colors.ts --exec \"tsx src/scripts/generate-scss-from-colors.ts\"",
+    "dev": "npm-run-all --parallel watch:colors build:watch tsm storybook demo"
+  },
+  "peerDependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "clsx": "^2.1.1"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.6",
+    "@storybook/addon-essentials": "^8.6.12",
+    "@storybook/addon-onboarding": "^8.6.12",
+    "@storybook/blocks": "^8.6.12",
+    "@storybook/experimental-addon-test": "^8.6.12",
+    "@storybook/react": "^8.6.12",
+    "@storybook/react-vite": "^8.6.12",
+    "@storybook/test": "^8.6.12",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@types/jest": "^29.5.14",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.15.2",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.4.1",
+    "@vitest/browser": "^3.1.2",
+    "@vitest/coverage-v8": "^3.1.2",
+    "jsdom": "^26.1.0",
+    "nodemon": "^3.1.10",
+    "npm-run-all": "^4.1.5",
+    "playwright": "^1.52.0",
+    "sass": "^1.87.0",
+    "storybook": "^8.6.12",
+    "tsx": "^4.19.3",
+    "typed-scss-modules": "^8.1.1",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.3",
+    "vite-plugin-dts": "^4.5.3",
+    "vite-plugin-lib-inject-css": "^2.2.2",
+    "vitest": "^3.1.2"
+  }
+}
