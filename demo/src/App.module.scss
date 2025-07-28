@@ -1,0 +1,21 @@
+.productContainer {
+  border: 1px solid red;
+  font-family: sans-serif;
+  text-align: center;
+  word-break: break-word;
+
+  img {
+    width: 100%;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}

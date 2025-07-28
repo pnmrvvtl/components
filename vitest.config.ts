@@ -16,6 +16,7 @@ export default defineConfig({
     },
   },
   test: {
+    globals: true,
     include: [
       'tests/**/*.test.tsx',
       '.storybook/**/*.test.ts'

@@ -16,7 +16,7 @@ const variantClassMap: Record<ButtonVariant, string> = {
   secondary: styles.secondary,
 };
 
-export const Button: React.FC<ButtonProps> = (props) => {
+export function Button(props: ButtonProps) {
   const { children, variant = 'primary', disabled, className, style, backgroundColor, ...rest } = props;
 
   return (
@@ -37,4 +37,4 @@ export const Button: React.FC<ButtonProps> = (props) => {
       {children}
     </button>
   );
-};
+}
